@@ -1,3 +1,11 @@
+/* =====================================================
+   TIPOGRAFIA
+   Lato 400 para textos
+   Lato 500 para textos destacados
+   Lato 700 para botões e títulos menores
+   Lato 900 para títulos principais
+===================================================== */
+
 :root {
   --primary: #061d49;
   --primary-medium: #073475;
@@ -34,8 +42,9 @@ body {
   overflow-x: hidden;
   background: var(--surface);
   color: var(--text);
-  font-family: "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
 }
@@ -75,6 +84,7 @@ figure {
 h1 {
   margin-bottom: 18px;
   font-size: clamp(2.35rem, 6vw, 4.4rem);
+  font-weight: 900;
   line-height: 1.08;
   letter-spacing: -0.04em;
 }
@@ -83,6 +93,7 @@ h2 {
   margin-bottom: 15px;
   color: var(--primary);
   font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
@@ -90,6 +101,7 @@ h2 {
 h3 {
   margin-bottom: 8px;
   font-size: 1.08rem;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -178,7 +190,7 @@ svg {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Cabeçalho */
+/* CABEÇALHO */
 
 .site-header {
   position: sticky;
@@ -254,10 +266,12 @@ svg {
   margin: 5px auto;
   border-radius: 999px;
   background: var(--primary);
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
-/* Hero */
+/* HERO */
 
 .hero {
   position: relative;
@@ -288,7 +302,11 @@ svg {
       rgba(4, 24, 58, 0.54) 62%,
       rgba(4, 24, 58, 0.12) 100%
     ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.20));
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.20)
+    );
 }
 
 .hero-content {
@@ -366,11 +384,15 @@ svg {
   color: var(--accent);
 }
 
-/* Serviços */
+/* SERVIÇOS */
 
 .services {
   background:
-    radial-gradient(circle at 15% 5%, rgba(247, 181, 0, 0.06), transparent 23%),
+    radial-gradient(
+      circle at 15% 5%,
+      rgba(247, 181, 0, 0.06),
+      transparent 23%
+    ),
     var(--surface);
 }
 
@@ -443,7 +465,7 @@ svg {
   line-height: 1.55;
 }
 
-/* Depoimentos */
+/* DEPOIMENTOS */
 
 .testimonials {
   position: relative;
@@ -468,8 +490,17 @@ svg {
 
 .testimonials-overlay {
   background:
-    linear-gradient(90deg, var(--primary) 0%, rgba(6, 29, 73, 0.92) 18%, rgba(6, 29, 73, 0.16) 100%),
-    linear-gradient(180deg, rgba(6, 29, 73, 0.20), rgba(6, 29, 73, 0.45));
+    linear-gradient(
+      90deg,
+      var(--primary) 0%,
+      rgba(6, 29, 73, 0.92) 18%,
+      rgba(6, 29, 73, 0.16) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 29, 73, 0.20),
+      rgba(6, 29, 73, 0.45)
+    );
 }
 
 .testimonials::before {
@@ -477,7 +508,11 @@ svg {
   inset: 0 auto 0 0;
   width: 65%;
   background:
-    radial-gradient(circle at 20% 40%, rgba(15, 78, 162, 0.48), transparent 40%),
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(15, 78, 162, 0.48),
+      transparent 40%
+    ),
     linear-gradient(120deg, #061d49, #083a80);
   content: "";
 }
@@ -568,7 +603,9 @@ svg {
   color: var(--primary);
   box-shadow: var(--shadow);
   cursor: pointer;
-  transition: transform var(--transition), background var(--transition);
+  transition:
+    transform var(--transition),
+    background var(--transition);
 }
 
 .carousel-button:hover {
@@ -597,7 +634,7 @@ svg {
   background: var(--accent);
 }
 
-/* Sobre */
+/* SOBRE */
 
 .about {
   background: #ffffff;
@@ -642,7 +679,6 @@ svg {
   border-radius: 11px;
   background: var(--primary);
   box-shadow: var(--shadow);
-
 }
 
 .about-photo img {
@@ -661,7 +697,7 @@ svg {
   font-weight: 500;
 }
 
-/* Localização */
+/* LOCALIZAÇÃO */
 
 .location {
   position: relative;
@@ -686,8 +722,17 @@ svg {
 
 .location-overlay {
   background:
-    linear-gradient(90deg, var(--primary) 0%, rgba(6, 29, 73, 0.83) 28%, rgba(6, 29, 73, 0.23) 100%),
-    linear-gradient(180deg, rgba(6, 29, 73, 0.10), rgba(6, 29, 73, 0.42));
+    linear-gradient(
+      90deg,
+      var(--primary) 0%,
+      rgba(6, 29, 73, 0.83) 28%,
+      rgba(6, 29, 73, 0.23) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 29, 73, 0.10),
+      rgba(6, 29, 73, 0.42)
+    );
 }
 
 .location::before {
@@ -738,12 +783,16 @@ svg {
   color: var(--accent);
 }
 
-/* Rodapé */
+/* RODAPÉ */
 
 .site-footer {
   padding-block: 50px 22px;
   background:
-    radial-gradient(circle at 10% 20%, rgba(15, 65, 124, 0.22), transparent 27%),
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(15, 65, 124, 0.22),
+      transparent 27%
+    ),
     var(--footer);
   color: #ffffff;
 }
@@ -818,7 +867,9 @@ svg {
   font-size: 0.72rem;
   font-weight: 700;
   text-decoration: none;
-  transition: transform var(--transition), background var(--transition);
+  transition:
+    transform var(--transition),
+    background var(--transition);
 }
 
 .social-links a:hover {
@@ -831,10 +882,8 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-
   margin-top: 28px;
   padding-top: 19px;
-
   border-top: 1px solid rgba(255, 255, 255, 0.11);
 }
 
@@ -848,9 +897,7 @@ svg {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-
   margin-left: auto;
-
   color: var(--accent);
   font-size: 0.82rem;
   font-weight: 700;
@@ -865,7 +912,7 @@ svg {
   text-underline-offset: 4px;
 }
 
-/* Botão flutuante */
+/* BOTÃO FLUTUANTE */
 
 .floating-whatsapp {
   position: fixed;
@@ -884,7 +931,9 @@ svg {
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(3, 19, 45, 0.30);
   text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .floating-whatsapp:hover {
@@ -892,7 +941,7 @@ svg {
   box-shadow: 0 17px 36px rgba(3, 19, 45, 0.38);
 }
 
-/* Animações */
+/* ANIMAÇÕES */
 
 html.js .reveal {
   opacity: 0;
@@ -932,7 +981,7 @@ html.js .hero-enter.visible {
   transition-delay: 220ms;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE INTERMEDIÁRIA */
 
 @media (max-width: 1080px) {
   .services-grid {
@@ -991,18 +1040,14 @@ html.js .hero-enter.visible {
     top: 74px;
     right: 0;
     left: 0;
-
     display: grid;
     max-height: 0;
     overflow: hidden;
-
     border-top: 1px solid rgba(7, 29, 73, 0.08);
     background: #ffffff;
     box-shadow: 0 14px 28px rgba(7, 29, 73, 0.13);
-
     opacity: 0;
     visibility: hidden;
-
     transition:
       max-height 0.32s ease,
       opacity 0.22s ease,
@@ -1122,7 +1167,6 @@ html.js .hero-enter.visible {
     gap: 35px;
   }
 }
-
 
 /* ========================================
    RESPONSIVIDADE PARA CELULARES
@@ -1263,7 +1307,6 @@ html.js .hero-enter.visible {
     min-height: 56px;
   }
 }
-
 
 /* ========================================
    REDUÇÃO DE MOVIMENTOS
