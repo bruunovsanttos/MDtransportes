@@ -38,6 +38,15 @@ html {
   scroll-padding-top: 92px;
 }
 
+#inicio,
+#servicos,
+#empresas,
+#sobre,
+#localizacao,
+#contato {
+  scroll-margin-top: 92px;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -1315,6 +1324,15 @@ html.js .hero-enter.visible {
 @media (max-width: 820px) {
   html {
     scroll-padding-top: 75px;
+  }
+
+  #inicio,
+  #servicos,
+  #empresas,
+  #sobre,
+  #localizacao,
+  #contato {
+    scroll-margin-top: 75px;
   }
 
   .section {
